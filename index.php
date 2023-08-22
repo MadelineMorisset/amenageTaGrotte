@@ -1,37 +1,29 @@
-<!DOCTYPE html>
-<html lang="fr-FR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- CSS -->
-        <link rel="stylesheet" href="css/style.css">
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Neuton:ital@0;1&family=Poltawski+Nowy:wght@600&display=swap" rel="stylesheet">
-        <!-- FontAwesome -->
-        <script src="https://kit.fontawesome.com/23c1a897ea.js" crossorigin="anonymous"></script>
+<?php include('appelBdd.php'); 
+      include('header.php'); ?>
 
-        <title>Aménage ta grotte</title>
-        <meta name="description" content="">
-    </head>
-    <body>
-        <header class="header">
-            <img src="img/logo.png" alt="Logo du blog : Aménage ta grotte" class="header-logoBlog">
-            <nav class="nav">
-                <section class="nav-homePage">
-                    <a href="index.php">Accueil</a>
-                </section>
-                <section class="nav-contact">
-                    <a href="index.php">Contact</a>
-                </section>
-            </nav>
-        </header>
-        <main>
+<main>
+    <section class="titles">
+        <div class="title1">
+            <h1>Aménage ta grotte</h1>
+        </div>
+        <div class="title2">
+            <h2>ou comment devenir un ermite respectable</h2>
+        </div>
+    </section>
+    <section class="cards">
+        <?php
+        $query = $db -> prepare('SELECT * FROM categorie');
+        $query -> execute();
+        $categorie = $query ->fetchAll();
+            foreach($categorie as $cat){
+        ?>
 
-        </main>
-        <footer>
+            <a class="card" href="categorie.php?id=<?=$cat['id_categorie']?>">
+                <img src="<?=$cat['media']?>" alt="image représentant la catégorie">
+                <p class="title-card"><?=$cat['categorie']?></p>
+            </a>   
+        <?php } ?>
+    </section>
+</main>
 
-        </footer>
-    </body>
-</html>
+<?php include('footer.php'); ?>

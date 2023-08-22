@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 21 août 2023 à 14:46
+-- Généré le : mar. 22 août 2023 à 14:57
 -- Version du serveur : 10.4.27-MariaDB
 -- Version de PHP : 8.2.0
 
@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `admin`
+-- Structure de la table `administrateur`
 --
 
-CREATE TABLE `admin` (
+CREATE TABLE `administrateur` (
   `id_admin` int(11) NOT NULL,
   `nom` varchar(75) DEFAULT NULL,
   `prenom` varchar(75) DEFAULT NULL,
@@ -36,13 +36,13 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Déchargement des données de la table `admin`
+-- Déchargement des données de la table `administrateur`
 --
 
-INSERT INTO `admin` (`id_admin`, `nom`, `prenom`, `mail`, `mdp`) VALUES
-(1, 'Angenard', 'Élodie', 'aelodie@mail.com', 'eloa'),
-(2, 'Morisset', 'Madeline', 'mmadeline@mail.com', 'madm'),
-(3, 'Guimard', 'Vanessa', 'gvanessa@mail.com', 'vang');
+INSERT INTO `administrateur` (`id_admin`, `nom`, `prenom`, `mail`, `mdp`) VALUES
+(1, 'Angenard', 'Élodie', 'aelodie@mail.com', '$2y$10$.oGKujRiNX3L4FGSAMv.relUu/LpEGFDRBE6rU5Z0SIYDWsibnNYe'),
+(2, 'Morisset', 'Madeline', 'mmadeline@mail.com', '$2y$10$8YuATo9wYBzW/lgYx.2ILeJ/pXQQDCdnHx87ZRCstXYVZBtNz22vC'),
+(3, 'Guimard', 'Vanessa', 'gvanessa@mail.com', '$2y$10$1uLZHwB/czzk4lSXOx2dSeLRJqSF284TvKP7bgSqAFor6vNuzEIdO');
 
 -- --------------------------------------------------------
 
@@ -115,9 +115,9 @@ CREATE TABLE `media` (
 --
 
 --
--- Index pour la table `admin`
+-- Index pour la table `administrateur`
 --
-ALTER TABLE `admin`
+ALTER TABLE `administrateur`
   ADD PRIMARY KEY (`id_admin`);
 
 --
@@ -155,16 +155,16 @@ ALTER TABLE `media`
 --
 
 --
--- AUTO_INCREMENT pour la table `admin`
+-- AUTO_INCREMENT pour la table `administrateur`
 --
-ALTER TABLE `admin`
+ALTER TABLE `administrateur`
   MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `article_blog`
 --
 ALTER TABLE `article_blog`
-  MODIFY `id_article` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_article` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `categorie`
@@ -192,14 +192,14 @@ ALTER TABLE `media`
 -- Contraintes pour la table `article_blog`
 --
 ALTER TABLE `article_blog`
-  ADD CONSTRAINT `article_blog_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `admin` (`id_admin`),
+  ADD CONSTRAINT `article_blog_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `administrateur` (`id_admin`),
   ADD CONSTRAINT `article_blog_ibfk_2` FOREIGN KEY (`id_categorie`) REFERENCES `categorie` (`id_categorie`);
 
 --
 -- Contraintes pour la table `categorie`
 --
 ALTER TABLE `categorie`
-  ADD CONSTRAINT `categorie_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `admin` (`id_admin`);
+  ADD CONSTRAINT `categorie_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `administrateur` (`id_admin`);
 
 --
 -- Contraintes pour la table `commentaire`
@@ -211,7 +211,7 @@ ALTER TABLE `commentaire`
 -- Contraintes pour la table `media`
 --
 ALTER TABLE `media`
-  ADD CONSTRAINT `media_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `admin` (`id_admin`),
+  ADD CONSTRAINT `media_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `administrateur` (`id_admin`),
   ADD CONSTRAINT `media_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article_blog` (`id_article`);
 COMMIT;
 
