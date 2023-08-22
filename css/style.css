@@ -1,5 +1,44 @@
 body {
-    font-family: 'Grenze Gotisch', cursive;
+    padding: 20px;
     font-family: 'Neuton', serif;
     font-family: 'Poltawski Nowy', serif;
+}
+
+a {text-decoration: none;}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-logoBlog {
+    width: 150px;
+    height: 118px;
+}
+
+.nav {
+    width: 400px;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-homePage, .nav-contact {
+    width: 150px;
+    height: 25px;
+    padding: 5px;
+    border: 2px solid #D6B096;
+    border-bottom: 5px solid #B89567;
+    border-radius: 10px 20px;
+    -webkit-border-radius: 10px 20px;
+    -moz-border-radius: 10px 20px;
+    -ms-border-radius: 10px 20px;
+    -o-border-radius: 10px 20px;
+    background-color: #D6B096;
+    text-align: center;
+}
+
+.nav-homePage a, .nav-contact a {
+    color: #fff;
+    text-shadow: 2px 2px #B89567;
 }
