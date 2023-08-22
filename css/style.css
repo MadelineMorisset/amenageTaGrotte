@@ -2,13 +2,15 @@ body {
     padding: 20px;
     font-family: 'Neuton', serif;
     font-family: 'Poltawski Nowy', serif;
+    text-align: center;
 }
 
-a {text-decoration: none;}
+a { text-decoration: none; }
 
 header {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 100px;
 }
 
 .header-logoBlog {
@@ -35,10 +37,35 @@ header {
     -ms-border-radius: 10px 20px;
     -o-border-radius: 10px 20px;
     background-color: #D6B096;
-    text-align: center;
 }
 
 .nav-homePage a, .nav-contact a {
     color: #fff;
     text-shadow: 2px 2px #B89567;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.titles {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.title1 {
+    margin-bottom: 50px;
+    font-size: 2em;
+}
+
+.cards {
+    width: 100%;
+    padding: 0 170px 170px 170px;
+}
+
+.card {
+    width: 300px;
+    height: 200px;
+    border: 2px solid #9eb384;
 }
