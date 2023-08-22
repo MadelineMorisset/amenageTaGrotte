@@ -18,7 +18,7 @@ $query->execute([
 ]);
 $administrateur = $query->fetchAll();
 foreach ($administrateur as $utilisateur) {
-    if ($mdp == $utilisateur['mdp']) {
+    if (password_verify($mdp, $utilisateur['mdp'])) {
         $_SESSION['mail'] = $mail;
         $_SESSION['id_admin'] = $utilisateur['id_admin'];
         $_SESSION['nom'] = $utilisateur['nom'];

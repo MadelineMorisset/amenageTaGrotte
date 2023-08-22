@@ -26,9 +26,8 @@ include('../header.php');
                 <input type="text" name="mdp" value="<?=$admin['mdp']?>">
                 <label for="mdp2" class="">Confirmez le mot de passe : </label>
                 <input type="text" name="mdp2" value="<?=$admin['mdp']?>">
-                <button type="submit">Ajouter</button>
-                <button type="submit" class="lato size-medium button">Modifier</button>
-                <input type="hidden" name="postid" value="<?= $_SESSION['id_admin']?>"/>
+                <button type="submit" class="">Modifier</button>
+                <input type="hidden" name="postid" value="<?=$admin['id_admin']?>"/>
             </div>  
         </form>
         <?php } ?>

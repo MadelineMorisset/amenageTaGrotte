@@ -8,10 +8,8 @@ include('../header.php');
         <h2>Gestion des administrateurs</h2>
 
         <?php 
-        $query = $db -> prepare('SELECT * FROM administrateur WHERE id_admin = :id');
-        $query->execute([
-            'id'=> $_GET['id'],
-        ]);
+        $query = $db -> prepare('SELECT * FROM administrateur');
+        $query->execute();
         $administrateur = $query ->fetchAll();
          ?>
 
