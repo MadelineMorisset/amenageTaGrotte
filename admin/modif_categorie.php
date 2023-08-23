@@ -3,6 +3,9 @@ include ('session_start.php');
 include('header_admin.php'); 
 ?>
 <main>
+    <div class="">
+        <a class="" href="voir_categorie.php">Retour</a>
+    </div>
     <h1 class=""><?php echo 'Bonjour '. $_SESSION['prenom']?></h1>
     <div class="">
         <h2>Modifier une catégorie</h2>
@@ -18,6 +21,11 @@ include('header_admin.php');
             <div class=""> 
                 <label for="categorie" class="">Catégorie : </label>
                 <input type="text" name="categorie" value="<?=$cat['categorie']?>">
+                <label for="media" class="">Média :</label>
+                <input type="file" name="media" value="<?=$cat['media']?>">
+                <input type="hidden" name="oldimage" value="<?=$cat['media']?>"/>
+                <label for="media-delete" class="">Supprimer</label>
+                <input type="checkbox" name="media-delete" value="../upload/<?=$cat['media']?>">
                 <button type="submit" class="">Modifier</button>
                 <input type="hidden" name="postid" value="<?=$cat['id_admin']?>"/>
             </div>  

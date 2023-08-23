@@ -3,6 +3,9 @@ include ('session_start.php');
 include('header_admin.php'); 
 ?>
 <main>
+    <div class="">
+        <a class="" href="voir_article.php">Retour</a>
+    </div>
     <h1 class=""><?php echo 'Bonjour '. $_SESSION['prenom']?></h1>
     <div class="">
         <h2>Modifier un article</h2>
