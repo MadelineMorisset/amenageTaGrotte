@@ -13,7 +13,7 @@ include('header_admin.php');
     ?>
     <h1 class="">Ajout d'un média</h1>
     
-    <form action="traitement/t_media.php" method="post">
+    <form action="traitement/t_media.php" method="post" enctype="multipart/form-data">
         <section class="">
             <label for="article">Article :</label>
             <select name="article">

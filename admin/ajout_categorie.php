@@ -9,7 +9,7 @@ include('header_admin.php');
     <h1 class=""><?php echo 'Bonjour '. $_SESSION['prenom']?></h1>
     <div class="">
         <h2>Ajout d'une categorie</h2>
-        <form action="traitement/t_categorie.php" method="post">
+        <form action="traitement/t_categorie.php" method="post" enctype="multipart/form-data" >
             <div class=""> 
                 <label for="cat" class="">Catégorie : </label>
                 <input type="text" name="cat" class="">

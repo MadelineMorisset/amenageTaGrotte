@@ -17,7 +17,7 @@ include('header_admin.php');
         ]);
         $categorie = $query ->fetchAll();
             foreach ( $categorie as $cat ){ ?>
-        <form action="traitement/t_modifCategorie.php" method="post">
+        <form action="traitement/t_modifCategorie.php" method="post" enctype="multipart/form-data">
             <div class=""> 
                 <label for="categorie" class="">Catégorie : </label>
                 <input type="text" name="categorie" value="<?=$cat['categorie']?>">
