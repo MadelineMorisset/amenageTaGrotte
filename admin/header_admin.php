@@ -1,9 +1,9 @@
-<?php include('../head.php'); ?>
+<?php include('head_admin.php'); ?>
 <header>
 <section class="menu">
     <nav>
         <div class="">
-            <a href="connect.php"><img class="logo" src="../images/logo.jpg" alt="logo du site"> </a>
+            <a href="connect.php"><img class="logo" src="../img/logo.png" alt="logo du site"> </a>
         </div>
         <?php if (isset($_SESSION['mail'])){ ?>
         <div class="">

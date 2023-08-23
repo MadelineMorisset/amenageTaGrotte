@@ -12,4 +12,4 @@ include('header_admin.php');
         <button type="submit">Se connecter</button>
     </form>
 </main>
-<?php include('../footer.php'); ?>
+<?php include('footer_admin.php'); ?>
