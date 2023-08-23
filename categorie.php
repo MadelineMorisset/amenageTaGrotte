@@ -22,14 +22,14 @@ include('header.php');
         <a class="" href="article.php?id=<?=$artBlog['id_article']?>">
         <?php 
         $query2 = $db -> prepare('SELECT * FROM article_blog INNER JOIN media ON article_blog.id_article = media.id_article 
-                                WHERE article_blog.id_categorie = :id');
+                                WHERE article_blog.id_categorie = :id LIMIT 1');
         $query2 -> execute([
             'id'=> $artBlog['id_article'],
         ]);
-        $medias = $query ->fetchAll();
+        $medias = $query2 ->fetchAll();
             foreach($medias as $media){
         ?>
-            <img src="upload/<?=$media['media'][0]?>" alt="illustration de l'article"/>
+            <img src="upload/<?=$media['media']?>" alt="illustration de l'article"/>
         <?php } ?>
             <h2><?=$artBlog['titre']?></h2>
         </a>
