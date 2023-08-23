@@ -12,4 +12,4 @@ if (isset($_POST['mail']) AND !empty($_POST['mail']) && $_POST['mdp'] == $_POST[
         'id'=>$_POST['postid'],
     ]);
 }  
-header('Location: ../admin.php?');
+header('Location: ../voir_admin.php?');

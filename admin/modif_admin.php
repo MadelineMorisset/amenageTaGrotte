@@ -5,7 +5,7 @@ include('header_admin.php');
 <main>
     <h1 class=""><?php echo 'Bonjour '. $_SESSION['prenom']?></h1>
     <div class="">
-        <h2>Ajout d'un article</h2>
+        <h2>Modifier un compte administrateur</h2>
 
         <?php 
         $query = $db -> prepare('SELECT * FROM administrateur WHERE id_admin = :id');
