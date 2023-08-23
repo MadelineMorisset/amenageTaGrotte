@@ -30,7 +30,7 @@ include('header.php');
         $media = $query ->fetchAll();
             foreach($media as $med){
         ?>
-            <img src="<?=$med['media']?>" alt="illustration de l'article"/>
+            <img src="upload/<?=$med['media']?>" alt="illustration de l'article"/>
         <?php } ?>
     </section>
     <?php } ?>
