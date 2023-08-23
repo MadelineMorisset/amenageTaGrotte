@@ -1,6 +1,6 @@
 <?php 
 include ('session_start.php');
-include('../header.php'); 
+include('header_admin.php'); 
 ?>
 <main>
     <h1 class=""><?php echo 'Bonjour '. $_SESSION['prenom']?></h1>
@@ -20,4 +20,4 @@ include('../header.php');
             </div>  
         </form>
 </main>
-<?php include('../footer.php'); ?>
+<?php include('footer_admin.php'); ?>
