@@ -6,6 +6,9 @@ include('header.php');
     <div class="">
         <a class="button-prev" href="categorie.php">Retour</a>
     </div>
+    <div class="title1">
+        <h1><?=$art['categorie']?></h1>
+    </div>
     <?php
     $query = $db -> prepare('SELECT * FROM categorie INNER JOIN article_blog ON categorie.id_categorie = article_blog.id_categorie 
                             WHERE article_blog.id_article = :id');
@@ -15,19 +18,17 @@ include('header.php');
     $article = $query ->fetchAll();
         foreach($article as $art){
     ?>
-    <div class="title1">
-        <h1><?=$art['categorie']?></h1>
-    </div>
+    
     <section class=""> 
         <h2><?=$art['titre']?></h2>
         <div><?=$art['texte']?></div>
         <?php 
         $query2 = $db -> prepare('SELECT * FROM article_blog INNER JOIN media ON article_blog.id_article = media.id_article 
-                                WHERE article_Blog.id_categorie = :id');
+                                WHERE article_Blog.id_article = :id LIMIT 1');
         $query2 -> execute([
             'id'=> $art['id_article'],
         ]);
-        $media = $query ->fetchAll();
+        $media = $query2 ->fetchAll();
             foreach($media as $med){
         ?>
             <img src="upload/<?=$med['media']?>" alt="illustration de l'article"/>
