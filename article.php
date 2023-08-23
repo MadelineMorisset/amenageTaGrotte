@@ -3,9 +3,6 @@ include('appelBdd.php');
 include('header.php'); 
 ?>
 <main>
-    <div class="">
-        <a class="button-prev" href="categorie.php">Retour</a>
-    </div>
     <?php
     $query = $db -> prepare('SELECT * FROM categorie INNER JOIN article_blog ON categorie.id_categorie = article_blog.id_categorie 
                             WHERE article_blog.id_article = :id');
@@ -15,6 +12,9 @@ include('header.php');
     $article = $query ->fetchAll();
         foreach($article as $art){
     ?>
+     <div class="">
+        <a class="button-prev" href="categorie.php?id=<?=$art['id_categorie']?>">Retour</a>
+    </div>
     <div class="title1">
         <h1><?=$art['categorie']?></h1>
     </div>
@@ -23,7 +23,7 @@ include('header.php');
         <div><?=$art['texte']?></div>
         <?php 
         $query2 = $db -> prepare('SELECT * FROM article_blog INNER JOIN media ON article_blog.id_article = media.id_article 
-                                WHERE article_Blog.id_categorie = :id');
+                                WHERE article_blog.id_categorie = :id');
         $query2 -> execute([
             'id'=> $art['id_article'],
         ]);
