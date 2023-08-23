@@ -5,7 +5,7 @@ if (isset($_FILES['media']) AND $_FILES['media']['error'] == 0){
     $fichier = basename($_FILES['media']['name']);
     $destination = $dossier.$fichier;
     $chemin =$fichier;
-        if ($files['media']['size'] <= 000000) {
+        if ($files['media']['size'] <= 1000000) {
             $fileInfo = pathinfo($_FILES['media']['name']);
             $extension = $fileInfo['extension'];
             $allowedExtensions = ['jpg', 'jpeg', 'gif', 'png'];
@@ -30,4 +30,4 @@ if (isset($_POST['categorie']) AND !empty($_POST['categorie'])){
         'id'=>$_POST['postid'],
     ]);
 }  
-header('Location: ../voir_categorie.php?');
+header('Location: ../voir_categorie.php');

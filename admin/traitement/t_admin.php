@@ -11,4 +11,4 @@ if (isset($_POST['mail']) AND !empty($_POST['mail']) && $_POST['mdp'] == $_POST[
         'mdp' => $hashed_mdp,
     ]);
 }  
-header('Location: ../voir_admin.php?');
+header('Location: ../voir_admin.php');

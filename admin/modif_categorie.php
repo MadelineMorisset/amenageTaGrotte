@@ -22,6 +22,7 @@ include('header_admin.php');
                 <label for="categorie" class="">Catégorie : </label>
                 <input type="text" name="categorie" value="<?=$cat['categorie']?>">
                 <label for="media" class="">Média :</label>
+                <img class="" src="../upload/<?=$cat['media']?>" alt="média"/>
                 <input type="file" name="media" value="<?=$cat['media']?>">
                 <input type="hidden" name="oldimage" value="<?=$cat['media']?>"/>
                 <label for="media-delete" class="">Supprimer</label>

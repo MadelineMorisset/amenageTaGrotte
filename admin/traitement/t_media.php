@@ -33,6 +33,6 @@ if (isset($_FILES['media']) AND $_FILES['media']['error'] == 0){
             'id_admin' => $_SESSION['id_admin'], 
         ]);
     }
-    header('Location: ../voir_media.php?');
+    header('Location: ../voir_media.php');
     
     ?>

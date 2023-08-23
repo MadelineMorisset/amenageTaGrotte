@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 23 août 2023 à 11:13
--- Version du serveur : 10.4.28-MariaDB
--- Version de PHP : 8.2.4
+-- Généré le : mar. 22 août 2023 à 14:57
+-- Version du serveur : 10.4.27-MariaDB
+-- Version de PHP : 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -68,7 +68,6 @@ CREATE TABLE `article_blog` (
 CREATE TABLE `categorie` (
   `id_categorie` int(11) NOT NULL,
   `categorie` varchar(100) DEFAULT NULL,
-  `media` varchar(255) NOT NULL,
   `id_admin` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -76,16 +75,12 @@ CREATE TABLE `categorie` (
 -- Déchargement des données de la table `categorie`
 --
 
-INSERT INTO `categorie` (`id_categorie`, `categorie`, `media`, `id_admin`) VALUES
-(1, 'Avantages/Inconvénients', '.\\img\\card_avantages_inconvénients.png', 1),
-(2, 'Bien choisir sa grotte', '.\\img\\card_bien_choisir.jpg', 2),
-(3, 'Habitat/aménagement', '.\\img\\card_habitat_amenagement_pexels-nadin-sh-17848606.jpg', 3),
-(4, 'Matériel nécessaire', '.\\img\\card_materiel_diy-932183_1280.jpg', 3),
-(5, 'Apprendre à être un bon grottier', '.\\img\\card_être un bon grottier_pexels-ricky-esquivel-2986508.jpg', 2),
-(6, 'Electricité', '.\\img\\card_electricite_lightning-2568381_1280.jpg', 1),
-(7, 'Loisirs', '.\\img\\card_loisirs_pexels-andrew-shelley-8454450.jpg', 1),
-(8, 'Potager', '.\\img\\card_potager_pexels-kampus-production-7658822.jpg', 1),
-(9, 'Protection', '.\\img\\card_protection_pexels-pixabay-274886.jpg', 1);
+INSERT INTO `categorie` (`id_categorie`, `categorie`, `id_admin`) VALUES
+(1, 'Avantages/Inconvénients', 1),
+(2, 'Bien choisir sa grotte', 2),
+(3, 'Habitat/aménagement', 3),
+(4, 'Matériel nécessaire', 3),
+(5, 'Apprendre à être un bon \"grottier\"', 2);
 
 -- --------------------------------------------------------
 
@@ -175,7 +170,7 @@ ALTER TABLE `article_blog`
 -- AUTO_INCREMENT pour la table `categorie`
 --
 ALTER TABLE `categorie`
-  MODIFY `id_categorie` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_categorie` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `commentaire`
