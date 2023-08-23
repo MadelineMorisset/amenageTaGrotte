@@ -13,6 +13,6 @@
         <script src="https://kit.fontawesome.com/23c1a897ea.js" crossorigin="anonymous"></script>
     <title>Aménage ta grotte</title>
     <meta name="description" content="">
-    <script src="https://cdn.tiny.cloud/1/b8m4cc9vao46ed6nxr44fan55hh9agksd6chwaptatj964uz/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/vz3wjot6rof8dxls90t27ebv5tmto5sdtgf0rjs4hlzd1lsg/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
 <body>
