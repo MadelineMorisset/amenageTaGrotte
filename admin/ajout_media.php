@@ -3,6 +3,9 @@ include ('session_start.php');
 include('header_admin.php'); 
 ?>
 <main>
+    <div class="">
+        <a class="" href="admin.php">Retour</a>
+    </div>
     <?php 
     $query = $db -> prepare('SELECT DISTINCT titre FROM article_blog');
     $query->execute();
