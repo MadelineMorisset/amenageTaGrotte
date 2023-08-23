@@ -29,7 +29,7 @@ include('header.php');
         $medias = $query ->fetchAll();
             foreach($medias as $media){
         ?>
-            <img src="<?=$media['media'][0]?>" alt="illustration de l'article"/>
+            <img src="upload/<?=$media['media'][0]?>" alt="illustration de l'article"/>
         <?php } ?>
             <h2><?=$artBlog['titre']?></h2>
         </a>
