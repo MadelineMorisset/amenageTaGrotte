@@ -19,7 +19,7 @@ include('header.php');
         <h1><?=$art['categorie']?></h1>
     </div>
     <section class=""> 
-        <h2><?=$art['title']?></h2>
+        <h2><?=$art['titre']?></h2>
         <div><?=$art['texte']?></div>
         <?php 
         $query2 = $db -> prepare('SELECT * FROM article_blog INNER JOIN media ON article_blog.id_article = media.id_article 
