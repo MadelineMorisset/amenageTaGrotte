@@ -10,6 +10,13 @@
             <h2>ou comment devenir un ermite respectable</h2>
         </div>
     </section>
+
+    <section>
+        <p>Tu as toujours rêvé de vivre en ermite sans jamais oser le faire ? Sans savoir comment t'y prendre ?</p>
+        <p>Aménage ta grotte est là pour t'aider à réaliser ton rêve !</p>
+        <p>Nous allons tout t'expliquer : pourquoi et comment choisir une grotte, l'aménager selon tes goûts et tes envies, avoir le confort de la vie moderne (sans les inconvénients), faire pousser ton potager et bien plus encore !!</p>
+    </section>
+
     <section class="cards">
         <?php
         $query = $db -> prepare('SELECT * FROM categorie');
