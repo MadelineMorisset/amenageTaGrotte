@@ -1,15 +1,11 @@
 <?php include('head_admin.php'); ?>
 <header>
-<section class="menu">
-    <nav>
-        <div class="">
-            <a href="connect.php"><img class="logo" src="../img/logo.png" alt="logo du site"> </a>
-        </div>
+    <a href="index.php"><img class="header-logoBlog" src="../img/logo.png" alt="logo du site"></a>
+    <nav class="nav">
         <?php if (isset($_SESSION['mail'])){ ?>
-        <div class="">
-            <a class="" href="logout.php"><p>Se déconnecter</p></a>
-        </div>
+        <section class="nav-button logout">
+            <a class="logoutLink" href="logout.php">Se déconnecter</a>
+        </section>
         <?php } ?>
     </nav>
-</section>
 </header>

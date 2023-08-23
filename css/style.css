@@ -1,3 +1,4 @@
+/* ------- BODY ------- */
 body {
     padding: 20px;
     font-family: 'Neuton', serif;
@@ -5,12 +6,16 @@ body {
     text-align: center;
 }
 
-a { text-decoration: none; }
+a { 
+    text-decoration: none;
+    color: #fff;
+}
 
+/* ------- HEADER ------- */
 header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
 }
 
 .header-logoBlog {
@@ -25,11 +30,11 @@ header {
     justify-content: space-between;
 }
 
-.nav-homePage, .nav-contact {
+.nav-button {
     width: 150px;
     height: 25px;
     padding: 5px;
-    border: 2px solid #D6B096;
+    border: 2px solid #B89567;
     border-bottom: 5px solid #B89567;
     border-radius: 10px 20px;
     -webkit-border-radius: 10px 20px;
@@ -37,19 +42,22 @@ header {
     -ms-border-radius: 10px 20px;
     -o-border-radius: 10px 20px;
     background-color: #D6B096;
-}
-
-.nav-homePage a, .nav-contact a {
-    color: #fff;
     text-shadow: 2px 2px #B89567;
 }
+
+.nav-button:active {
+    border-bottom: 2px solid #B89567;
+    box-shadow: 0px 2px 4px #B89567 inset;
+}
+
+/* ------- MAIN ------- */
 
 main {
     display: flex;
     flex-wrap: wrap;
 }
 
-.titles {
+.titles, .adminPage {
     width: 100%;
     margin-bottom: 100px;
 }
@@ -68,4 +76,99 @@ main {
     width: 300px;
     height: 200px;
     border: 2px solid #9eb384;
+}
+
+/* ------- FOOTER ------- */
+
+
+/* ---------- ADMIN - CONNECT------------ */
+
+.formConnection {
+    width: 100%;
+    padding: 0 40%;
+}
+
+.identification {
+    padding: 0 15px 0 41px;
+}
+
+.pseudoEmail {margin-bottom: 15px;}
+
+.label, .inputLoginAccount {width: 100%;}
+
+.inputLoginAccount {
+    margin: 9px 0;
+    padding: 5px;
+    border: 1px solid #3C5E68;
+    border-radius: 5px;
+    background-color: #FFFDF9;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.connection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    margin-top: 13px;
+}
+
+.button150px35px {
+    width: 150px;
+    height: 35px;
+    padding: 5px;
+    border: 2px solid #B89567;
+    border-bottom: 5px solid #B89567;
+    border-radius: 10px 20px;
+    -webkit-border-radius: 10px 20px;
+    -moz-border-radius: 10px 20px;
+    -ms-border-radius: 10px 20px;
+    -o-border-radius: 10px 20px;
+    text-shadow: 2px 2px #B89567;
+    background-color: #D6B096;
+}
+
+.button115px35px:active {
+    border-bottom: 2px solid #B89567;
+    box-shadow: 0px 2px 4px #B89567 inset;
+}
+
+/* ---------- ADMIN - ADMIN ------------ */
+.nav-button.logout { margin-left: auto; }
+
+.adminSection {
+    display: flex;
+    padding: 0 35%;
+    justify-content: space-between;
+}
+
+.adminSection .title2, .addButton, 
+.deleteButton {align-self: center;}
+
+.adminButtons {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.addButton, .deleteButton {
+    width: 80px;
+    height: 25px;
+    padding: 5px;
+    border: 2px solid #B89567;
+    border-bottom: 5px solid #B89567;
+    border-radius: 10px 20px;
+    -webkit-border-radius: 10px 20px;
+    -moz-border-radius: 10px 20px;
+    -ms-border-radius: 10px 20px;
+    -o-border-radius: 10px 20px;
+    background-color: #D6B096;
+    text-shadow: 2px 2px #B89567;
+}
+
+.addButton:active, .deleteButton:active {
+    border-bottom: 2px solid #B89567;
+    box-shadow: 0px 2px 4px #B89567 inset;
 }
