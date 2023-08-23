@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 23 août 2023 à 12:24
+-- Généré le : mer. 23 août 2023 à 13:44
 -- Version du serveur : 10.4.27-MariaDB
 -- Version de PHP : 8.2.0
 
@@ -68,9 +68,24 @@ CREATE TABLE `article_blog` (
 CREATE TABLE `categorie` (
   `id_categorie` int(11) NOT NULL,
   `categorie` varchar(100) DEFAULT NULL,
-  `media` text DEFAULT NULL,
+  `media` varchar(255) DEFAULT NULL,
   `id_admin` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `categorie`
+--
+
+INSERT INTO `categorie` (`id_categorie`, `categorie`, `media`, `id_admin`) VALUES
+(18, 'Avantages/ Inconvénients', 'card_avantages_inconvénients.png', 3),
+(19, 'Bien choisir sa grotte', 'card_bien_choisir.jpg', 3),
+(20, 'Habitat/ aménagement', 'card_habitat_amenagement_pexels-nadin-sh-17848606.jpg', 3),
+(21, 'Apprendre à être un bon grottier', 'card_être un bon grottier_pexels-ricky-esquivel-2986508.jpg', 3),
+(22, 'Matériel nécessaire', 'card_materiel_diy-932183_1280.jpg', 3),
+(23, 'Électricité', 'card_electricite_lightning-2568381_1280.jpg', 3),
+(24, 'Potager', 'card_potager_pexels-kampus-production-7658822.jpg', 3),
+(25, 'Protection', 'card_protection_pexels-pixabay-274886.jpg', 3),
+(26, 'Loisirs', 'card_loisirs_pexels-andrew-shelley-8454450.jpg', 3);
 
 -- --------------------------------------------------------
 
@@ -154,13 +169,13 @@ ALTER TABLE `administrateur`
 -- AUTO_INCREMENT pour la table `article_blog`
 --
 ALTER TABLE `article_blog`
-  MODIFY `id_article` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_article` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `categorie`
 --
 ALTER TABLE `categorie`
-  MODIFY `id_categorie` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_categorie` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT pour la table `commentaire`
