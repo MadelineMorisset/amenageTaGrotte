@@ -10,4 +10,4 @@ $query->execute([
     'id_admin' => $_SESSION['id_admin'], 
     ]);
 
-header('Location: ../voir_article.php?');
+header('Location: ../voir_article.php');

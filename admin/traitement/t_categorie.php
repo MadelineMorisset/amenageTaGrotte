@@ -4,7 +4,7 @@ if (isset($_FILES['media']) AND $_FILES['media']['error'] == 0){
     $fichier = basename($_FILES['media']['name']);
     $destination = $dossier.$fichier;
     $chemin =$fichier;
-        if ($files['media']['size'] <= 000000) {
+        if ($files['media']['size'] <= 1000000) {
             $fileInfo = pathinfo($_FILES['media']['name']);
             $extension = $fileInfo['extension'];
             $allowedExtensions = ['jpg', 'jpeg', 'gif', 'png'];
@@ -16,12 +16,11 @@ if (isset($_FILES['media']) AND $_FILES['media']['error'] == 0){
         $chemin = null;
     }
 
-    $query = $db->prepare('INSERT INTO categorie (categorie, media, id_admin) 
-    VALUES(:categorie, :media, :id_admin)');
-$query->execute([
-    'categorie' => $_POST['cat',]
+    $query = $db->prepare('INSERT INTO categorie (categorie, media, id_admin) VALUES(:categorie, :media, :id_admin)');
+    $query->execute([
+    'categorie' => $_POST['cat'],
     'media' => $chemin,
     'id_admin' => $_SESSION['id_admin'], 
     ]);
 
-header('Location: ../voir_categorie.php?');
+header('Location: ../voir_categorie.php');

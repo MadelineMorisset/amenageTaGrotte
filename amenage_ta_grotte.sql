@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 22 août 2023 à 14:57
+-- Généré le : mer. 23 août 2023 à 11:43
 -- Version du serveur : 10.4.27-MariaDB
 -- Version de PHP : 8.2.0
 
@@ -68,6 +68,7 @@ CREATE TABLE `article_blog` (
 CREATE TABLE `categorie` (
   `id_categorie` int(11) NOT NULL,
   `categorie` varchar(100) DEFAULT NULL,
+  `media` text DEFAULT NULL,
   `id_admin` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -75,12 +76,13 @@ CREATE TABLE `categorie` (
 -- Déchargement des données de la table `categorie`
 --
 
-INSERT INTO `categorie` (`id_categorie`, `categorie`, `id_admin`) VALUES
-(1, 'Avantages/Inconvénients', 1),
-(2, 'Bien choisir sa grotte', 2),
-(3, 'Habitat/aménagement', 3),
-(4, 'Matériel nécessaire', 3),
-(5, 'Apprendre à être un bon \"grottier\"', 2);
+INSERT INTO `categorie` (`id_categorie`, `categorie`, `media`, `id_admin`) VALUES
+(1, 'Avantages/ Inconvénients', NULL, 1),
+(2, 'Bien choisir sa grotte', NULL, 2),
+(3, 'Habitat/aménagement', NULL, 3),
+(4, 'Matériel nécessaire', NULL, 3),
+(5, 'Apprendre à être un bon \"grottier\"', NULL, 2),
+(6, 'Matériel nécessaire', NULL, 3);
 
 -- --------------------------------------------------------
 
@@ -170,7 +172,7 @@ ALTER TABLE `article_blog`
 -- AUTO_INCREMENT pour la table `categorie`
 --
 ALTER TABLE `categorie`
-  MODIFY `id_categorie` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_categorie` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `commentaire`
