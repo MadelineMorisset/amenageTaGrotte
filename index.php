@@ -18,7 +18,7 @@
             foreach($categorie as $cat){
         ?>
             <a class="card" href="categorie.php?id=<?=$cat['id_categorie']?>">
-                <img src="<?=$cat['media']?>" alt="image représentant la catégorie">
+                <img src="upload/<?=$cat['media']?>" alt="image représentant la catégorie">
                 <p class="title-card"><?=$cat['categorie']?></p>
             </a>   
         <?php } ?>
