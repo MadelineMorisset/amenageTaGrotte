@@ -4,7 +4,7 @@ include('header.php');
 ?>
 <main>
     <div class="">
-        <a class="button150px35px" href="index.php">Retour</a>
+        <a class="button150px35px" href="index.php"><i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i></a>
     </div>
     <?php 
     $query = $db -> prepare('SELECT * FROM categorie WHERE id_categorie = :id');

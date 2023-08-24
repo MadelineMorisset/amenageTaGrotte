@@ -13,11 +13,15 @@ include('header.php');
         foreach($article as $art){
     ?>
      <div class="">
-        <a class="button150px35px" href="categorie.php?id=<?=$art['id_categorie']?>">Retour</a>
+        <a class="button150px35px" href="categorie.php?id=<?=$art['id_categorie']?>"><i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i></a>
     </div>
     
     <section class=""> 
-        <h2><?=$art['titre']?></h2>
+        <div class="titles">
+            <div class="title2">
+                <h2><?=$art['titre']?></h2>
+            </div>
+        </div>
         <div><?=$art['texte']?></div>
         <?php 
         $query2 = $db -> prepare('SELECT * FROM article_blog INNER JOIN media ON article_blog.id_article = media.id_article 
@@ -33,7 +37,7 @@ include('header.php');
     </section>
 
     <section class="section-comm">
-        <section>
+        <section class="sect-comm-top">
             <div>
                 <p>Commentaires</p>
             </div>
@@ -46,9 +50,11 @@ include('header.php');
                 foreach($commentaire as $com){
             ?>
             <div class="sect-comm-pre">
-                <p><?= $com['date_commentaire']?></p>
-                <p><?=$com['nom']?> :</p>
-                <p><?=$com['commentaire']?></p>    
+                <section class="sect-comm-pre-p">    
+                    <p><?= $com['date_commentaire']?></p>
+                    <p><?=$com['nom']?> :</p>
+                    <p><?=$com['commentaire']?></p> 
+                </section>   
             </div>
             <?php } ?>
         </section> 
