@@ -4,7 +4,7 @@ include('header_admin.php');
 ?>
 <main>
     <div class="">
-        <a class="" href="admin.php">Retour</a>
+        <a class="nav-button" href="admin.php">Retour</a>
     </div>
     <h1 class=""><?php echo 'Bonjour '. $_SESSION['prenom']?></h1>
     <div class="">

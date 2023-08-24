@@ -4,7 +4,7 @@ include('header_admin.php');
 ?>
 <main>
     <div class="">
-        <a class="" href="admin.php">Retour</a>
+        <a class="nav-button" href="admin.php">Retour</a>
     </div>
     <h1 class=""><?php echo 'Bonjour '. $_SESSION['prenom']?></h1>
     <div class="">
@@ -26,8 +26,8 @@ include('header_admin.php');
                     <?php  foreach ( $article as $art ){{ ?>
                         <td><?=$art['titre']?></td>
                         <td class="">
-                            <a class="button150px35px" href="modif_article.php?id=<?=$art['id_article']?>">Modifier</a>
-                            <a class="button150px35px" href="traitement/supprimer_article.php?id=<?=$art['id_article']?>">Supprimer</a>
+                            <a class="nav-button" href="modif_article.php?id=<?=$art['id_article']?>">Modifier</a>
+                            <a class="nav-button" href="traitement/supprimer_article.php?id=<?=$art['id_article']?>">Supprimer</a>
                         </td>
                     </tr>
                     <?php } ?>

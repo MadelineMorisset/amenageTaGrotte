@@ -4,11 +4,11 @@ include('header_admin.php');
 ?>
 <main>
     <div class="">
-        <a class="" href="admin.php">Retour</a>
+        <a class="nav-button" href="admin.php">Retour</a>
     </div>
     <h1 class=""><?php echo 'Bonjour '. $_SESSION['prenom']?></h1>
     <div class="">
-        <h2>Ajout d'un article</h2>
+        <h2>Ajout d'un administrateur</h2>
         <form action="traitement/t_admin.php" method="post">
             <div class=""> 
                 <label for="nom" class="">Nom : </label>
@@ -19,7 +19,7 @@ include('header_admin.php');
                 <input type="email" name="mail" class="">
                 <label for="mdp" class="">Mot de passe : </label>
                 <input type="text" name="mdp" class="">
-                <button type="submit">Ajouter</button>
+                <button class="nav-button" type="submit">Ajouter</button>
             </div>  
         </form>
 </main>
