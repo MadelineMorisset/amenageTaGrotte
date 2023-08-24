@@ -17,7 +17,7 @@ include('header_admin.php');
          ?>
 
 
-        <table class="">
+        <table class="table-admin">
                 <thead>
                     <tr>
                         <th>Nom</th>
@@ -37,7 +37,8 @@ include('header_admin.php');
                     </tr>
                     <?php } ?>
                 </tbody>
+                <?php } ?>
             </table>
-        <?php } ?>
+       
 </main>
 <?php include('footer_admin.php'); ?>

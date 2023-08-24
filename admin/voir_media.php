@@ -14,7 +14,7 @@ include('header_admin.php');
         $query->execute();
         $media = $query ->fetchAll();
          ?>
-        <table class="">
+        <table class="table-admin">
                 <thead>
                     <tr>
                         <th>media</th>
@@ -31,7 +31,8 @@ include('header_admin.php');
                     </tr>
                     <?php } ?>
                 </tbody>
+                <?php } ?>
             </table>
-        <?php } ?>
+     
 </main>
 <?php include('footer_admin.php'); ?>

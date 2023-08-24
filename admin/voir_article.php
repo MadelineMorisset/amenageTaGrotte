@@ -14,7 +14,7 @@ include('header_admin.php');
         $query->execute();
         $article = $query ->fetchAll();
          ?>
-        <table class="">
+        <table class="table-admin">
                 <thead>
                     <tr>
                         <th>article</th>
@@ -32,7 +32,8 @@ include('header_admin.php');
                     </tr>
                     <?php } ?>
                 </tbody>
+                <?php } ?>
             </table>
-        <?php } ?>
+      
 </main>
 <?php include('footer_admin.php'); ?>

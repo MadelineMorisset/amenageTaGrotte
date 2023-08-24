@@ -180,3 +180,13 @@ main {
     border-bottom: 2px solid #B89567;
     box-shadow: 0px 2px 4px #B89567 inset;
 }
+.table-admin {
+    width: 800px; 
+}
+.table-admin th{
+    padding: 25px;
+    font-size: 1.25rem;
+}
+.table-admin td{
+    padding: 15px;
+}

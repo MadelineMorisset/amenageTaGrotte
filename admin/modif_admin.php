@@ -26,9 +26,9 @@ include('header_admin.php');
                 <label for="mail" class="">Mail : </label>
                 <input type="email" name="mail" value="<?=$admin['mail']?>">
                 <label for="mdp" class="">Mot de passe : </label>
-                <input type="text" name="mdp" value="<?=$admin['mdp']?>">
+                <input type="password" name="mdp" value="<?=$admin['mdp']?>">
                 <label for="mdp2" class="">Confirmez le mot de passe : </label>
-                <input type="text" name="mdp2" value="<?=$admin['mdp']?>">
+                <input type="password" name="mdp2" value="<?=$admin['mdp']?>">
                 <button type="submit" class="">Modifier</button>
                 <input type="hidden" name="postid" value="<?=$admin['id_admin']?>"/>
             </div>  
