@@ -32,41 +32,52 @@ include('header.php');
         <?php } ?>
     </section>
 
-    <section>
-        <div>
-            <p>Commentaires</p>
-        </div>
-        <?php 
-        $query3 = $db -> prepare('SELECT * FROM commentaire WHERE id_article = :id');
-        $query3 -> execute([
-            'id'=> $_GET['id'],
-        ]);
-        $commentaire = $query3 ->fetchAll();
-            foreach($commentaire as $com){
-        ?>
-        <div>
-            <p><?= $com['date_commentaire']?></p>
-            <p><?=$com['nom']?> :</p>
-            <p><?=$com['commentaire']?></p>    
-        </div>
-        <?php } ?>
-    </section> 
- 
-    <section>
-        <h3>Laisser un commentaire</h3>
-        <p>Votre adresse e-mail ne sera pas publiée. Tous les champs sont obligatoires.</p>
+    <section class="section-comm">
+        <section>
+            <div>
+                <p>Commentaires</p>
+            </div>
+            <?php 
+            $query3 = $db -> prepare('SELECT * FROM commentaire WHERE id_article = :id');
+            $query3 -> execute([
+                'id'=> $_GET['id'],
+            ]);
+            $commentaire = $query3 ->fetchAll();
+                foreach($commentaire as $com){
+            ?>
+            <div class="sect-comm-pre">
+                <p><?= $com['date_commentaire']?></p>
+                <p><?=$com['nom']?> :</p>
+                <p><?=$com['commentaire']?></p>    
+            </div>
+            <?php } ?>
+        </section> 
+                    
+        <hr class="barre-separation"/>
 
-        <form method="post" action="admin/traitement/t_commentaire.php">
-            <input type="hidden" name="date_com" value="<?php echo date('Y-m-d')?>" />
-            <label for="com" class="">Commentaire : </label>
-            <textarea name="com" class=""></textarea>
-            <label for="nom" class="">Nom:</label>
-            <input type="text" name="nom">
-            <label for="mail" class="">E-mail : </label>
-            <input type="email" name="mail">
-            <input type="hidden" name="postid" value="<?=$_GET['id']?> "/>
-            <button type="submit">Laisser un commentaire</button>   
+        <section class="sect-comm-ecrire">
+            <h3>Laisser un commentaire</h3>
+            <p>Votre adresse e-mail ne sera pas publiée. Tous les champs sont obligatoires.</p>
+
+            <form method="post" action="admin/traitement/t_commentaire.php">
+                <input type="hidden" name="date_com" value="<?php echo date('Y-m-d')?>" />
+                <section class="form-comm">
+                    <label for="com" class="label">Commentaire : </label>
+                    <textarea name="com" class=""></textarea>
+                </section>
+                <section class="form-comm">
+                    <label for="nom" class="label">Nom:</label>
+                    <input type="text" name="nom">
+                </section>
+                <section class="form-comm">
+                    <label for="mail" class="label">E-mail : </label>
+                    <input type="email" name="mail">
+                </section>
+                <input type="hidden" name="postid" value="<?=$_GET['id']?> "/>
+                <button class="button150px35px" type="submit">Envoyer</button>   
+        </section>
     </section>
+    
     <?php } ?>
 </main>
 <?php include('footer.php'); ?>

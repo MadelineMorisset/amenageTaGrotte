@@ -118,6 +118,44 @@ main {
     text-decoration: none;
     color: #000;
 }
+.section-comm {
+    width: -webkit-fill-available;
+    background-color: #DFD5C8;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+}
+.sect-comm-pre {
+    background-color: #fff;
+}
+.sect-comm-ecrire {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.form-comm {
+    width: 100%;
+    display: grid;
+}
+.form-comm .label {
+    width: 100%;
+}
+.form-comm textarea {
+    width: 100%;
+    height: 100px;
+}
+.form-comm input {
+    width: 50%;
+    margin: 0 auto;
+}
+.sect-comm-ecrire button {
+    margin-top: 20px;
+}
+.barre-separation {
+    border-top: 5px solid #B89567;
+    margin-top: 50px;
+}
+
 /* ------- FOOTER ------- */
 
 
