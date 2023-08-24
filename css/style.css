@@ -37,10 +37,6 @@ header {
     border: 2px solid #B89567;
     border-bottom: 5px solid #B89567;
     border-radius: 10px 20px;
-    -webkit-border-radius: 10px 20px;
-    -moz-border-radius: 10px 20px;
-    -ms-border-radius: 10px 20px;
-    -o-border-radius: 10px 20px;
     background-color: #D6B096;
     text-shadow: 2px 2px #B89567;
 }
@@ -49,6 +45,7 @@ header {
     border-bottom: 2px solid #B89567;
     box-shadow: 0px 2px 4px #B89567 inset;
 }
+
 .nav-button a{
     text-decoration: none;
     color: #fff;
@@ -58,6 +55,7 @@ header {
 main {
     display: flex;
     flex-wrap: wrap;
+    padding: 0 300px 250px 300px;
 }
 
 .titles, .adminPage {
@@ -70,19 +68,55 @@ main {
     font-size: 2em;
 }
 
+.titleDesc {
+    margin-top: 50px;
+}
+
 .cards {
     width: 100%;
-    padding: 0 170px 170px 170px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .card {
-    width: 300px;
+    width: 200px;
     height: 200px;
-    border: 2px solid #9eb384;
+    margin: 0 80px 100px 80px;
+    border: 4px solid #9eb384;
+    border-radius: 10px 20px;
+    box-shadow: 4px 4px 5px #9eb384;
 }
+
+.card:active {
+    box-shadow: none;
+}
+
+.image-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 7px 17px;
+    object-fit: cover;
+}
+
+.sectionTitleCard {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: -204.5px;
+    border-radius: 7px 17px;
+    background-color: #ffffffb7;
+    color: #000;
+}
+
+.title-card {font-size: 1.4em;}
+
 .section-category a{
     text-decoration: none;
-    color: black;
+    color: #000;
 }
 /* ------- FOOTER ------- */
 
@@ -105,13 +139,8 @@ main {
 .inputLoginAccount {
     margin: 9px 0;
     padding: 5px;
-    border: 1px solid #3C5E68;
-    border-radius: 5px;
-    background-color: #FFFDF9;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    border: 1px solid #B89567;
+    border-radius: 10px 20px;
 }
 
 .connection {
@@ -128,10 +157,6 @@ main {
     border: 2px solid #B89567;
     border-bottom: 5px solid #B89567;
     border-radius: 10px 20px;
-    -webkit-border-radius: 10px 20px;
-    -moz-border-radius: 10px 20px;
-    -ms-border-radius: 10px 20px;
-    -o-border-radius: 10px 20px;
     text-shadow: 2px 2px #B89567;
     background-color: #D6B096;
     text-decoration: none;
