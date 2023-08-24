@@ -4,11 +4,11 @@ include('header_admin.php');
 ?>
 <main>
     <div class="">
-        <a class="" href="voir_article.php">Retour</a>
+        <a class="nav-button" href="voir_article.php">Retour</a>
     </div>
-    <h1 class=""><?php echo 'Bonjour '. $_SESSION['prenom']?></h1>
-    <div class="">
-        <h2>Modifier un article</h2>
+    
+    <div class="sectionForm">
+        <h1>Modifier un article</h1>
 
         <?php 
         $query = $db -> prepare('SELECT * FROM article_blog INNER JOIN categorie ON article_blog.id_categorie = categorie.id_categorie WHERE id_article = :id');
@@ -18,7 +18,7 @@ include('header_admin.php');
         $article = $query ->fetchAll();
             foreach ( $article as $art){ ?>
         <form action="traitement/t_modifArticle.php" method="post">
-            <div class=""> 
+            <div class="form-admin"> 
                 <label for="categorie" class="">Catégorie : </label>
                 <input type="text" name="categorie" value="<?=$art['categorie']?>">
                 <label for="date" class="">Date :</label>
@@ -32,5 +32,6 @@ include('header_admin.php');
             </div>  
         </form>
         <?php } ?>
+    </div>
 </main>
 <?php include('footer_admin.php'); ?>

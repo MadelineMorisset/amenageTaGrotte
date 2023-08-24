@@ -4,11 +4,11 @@ include('header_admin.php');
 ?>
 <main>
     <div class="">
-        <a class="" href="voir_admin.php">Retour</a>
+        <a class="nav-button" href="voir_admin.php">Retour</a>
     </div>
-    <h1 class=""><?php echo 'Bonjour '. $_SESSION['prenom']?></h1>
-    <div class="">
-        <h2>Modifier un compte administrateur</h2>
+    
+    <div class="sectionForm">
+        <h1>Modifier un compte administrateur</h1>
 
         <?php 
         $query = $db -> prepare('SELECT * FROM administrateur WHERE id_admin = :id');
@@ -18,7 +18,7 @@ include('header_admin.php');
         $administrateur = $query ->fetchAll();
             foreach ( $administrateur as $admin ){ ?>
         <form action="traitement/t_modifAdmin.php" method="post">
-            <div class=""> 
+            <div class="form-admin"> 
                 <label for="nom" class="">Nom : </label>
                 <input type="text" name="nom" value="<?=$admin['nom']?>">
                 <label for="prenom" class="">Prenom : </label>
@@ -34,5 +34,6 @@ include('header_admin.php');
             </div>  
         </form>
         <?php } ?>
+    </div>
 </main>
 <?php include('footer_admin.php'); ?>

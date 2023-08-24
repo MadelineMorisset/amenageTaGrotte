@@ -6,9 +6,9 @@ include('header_admin.php');
     <div class="">
         <a class="" href="voir_categorie.php">Retour</a>
     </div>
-    <h1 class=""><?php echo 'Bonjour '. $_SESSION['prenom']?></h1>
-    <div class="">
-        <h2>Modifier une catégorie</h2>
+    
+    <div class="sectionForm">
+        <h1>Modifier une catégorie</h1>
 
         <?php 
         $query = $db -> prepare('SELECT * FROM categorie WHERE id_categorie = :id');
@@ -18,7 +18,7 @@ include('header_admin.php');
         $categorie = $query ->fetchAll();
             foreach ( $categorie as $cat ){ ?>
         <form action="traitement/t_modifCategorie.php" method="post" enctype="multipart/form-data">
-            <div class=""> 
+            <div class="form-admin"> 
                 <label for="categorie" class="">Catégorie : </label>
                 <input type="text" name="categorie" value="<?=$cat['categorie']?>">
                 <label for="media" class="">Média :</label>
@@ -32,5 +32,6 @@ include('header_admin.php');
             </div>  
         </form>
         <?php } ?>
+    </div>
 </main>
 <?php include('footer_admin.php'); ?>

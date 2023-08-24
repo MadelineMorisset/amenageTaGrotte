@@ -6,9 +6,8 @@ include('header_admin.php');
     <div class="">
         <a class="nav-button" href="admin.php">Retour</a>
     </div>
-    <h1 class=""><?php echo 'Bonjour '. $_SESSION['prenom']?></h1>
-    <div class="">
-        <h2>Gestion des administrateurs</h2>
+    <div class="sectionForm">
+        <h1>Gestion des administrateurs</h1>
 
         <?php 
         $query = $db -> prepare('SELECT * FROM administrateur');
@@ -39,6 +38,7 @@ include('header_admin.php');
                 </tbody>
                 <?php } ?>
             </table>
+    </div>
        
 </main>
 <?php include('footer_admin.php'); ?>

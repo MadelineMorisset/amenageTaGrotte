@@ -6,11 +6,11 @@ include('header_admin.php');
     <div class="">
         <a class="nav-button" href="admin.php">Retour</a>
     </div>
-    <h1 class=""><?php echo 'Bonjour '. $_SESSION['prenom']?></h1>
-    <div class="">
-        <h2>Ajout d'un administrateur</h2>
-        <form action="traitement/t_admin.php" method="post">
-            <div class=""> 
+    <div class="sectionForm">
+        <h1>Ajout d'un administrateur</h1>
+ 
+        <form action="traitement/t_admin.php" method="post" class="">
+            <div class="form-admin"> 
                 <label for="nom" class="">Nom : </label>
                 <input type="text" name="nom" class="">
                 <label for="prenom" class="">Prenom : </label>
@@ -19,8 +19,9 @@ include('header_admin.php');
                 <input type="email" name="mail" class="">
                 <label for="mdp" class="">Mot de passe : </label>
                 <input type="text" name="mdp" class="">
+            </div>
                 <button class="button150px35px" type="submit">Ajouter</button>
-            </div>  
         </form>
+    </div>
 </main>
 <?php include('footer_admin.php'); ?>

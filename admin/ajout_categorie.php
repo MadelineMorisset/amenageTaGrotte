@@ -6,15 +6,18 @@ include('header_admin.php');
     <div class="">
         <a class="nav-button" href="admin.php">Retour</a>
     </div>
-    <h1 class=""><?php echo 'Bonjour '. $_SESSION['prenom']?></h1>
-    <div class="">
-        <h2>Ajout d'une categorie</h2>
+
+    <div class="sectionForm">
+        <h1>Ajout d'une categorie</h1>
         <form action="traitement/t_categorie.php" method="post" enctype="multipart/form-data" >
+            <section class="form-admin">
                 <label for="cat" class="">Catégorie : </label>
                 <input type="text" name="cat" class="">
                 <label for="media" class="">Média :</label>
                 <input type="file" name="media">
+            </section>
                 <button class="button150px35px" type="submit">Ajouter</button>
         </form>
+    </div>
 </main>
 <?php include('footer_admin.php'); ?>
