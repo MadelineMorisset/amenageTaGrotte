@@ -25,7 +25,7 @@ include('header_admin.php');
                     <?php  foreach ( $media as $med ){{ ?>
                         <td><?=$med['media']?></td>
                         <td class="">
-                            <a class="button150px35px" href="traitement/supprimer_media.php?id=<?=$med['id_media']?>">Supprimer</a>
+                            <a class="button150px35px supprimer" href="traitement/supprimer_media.php?id=<?=$med['id_media']?>">Supprimer</a>
                         </td>
                     </tr>
                     <?php } ?>

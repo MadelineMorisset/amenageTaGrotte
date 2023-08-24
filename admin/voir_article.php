@@ -26,7 +26,7 @@ include('header_admin.php');
                         <td><?=$art['titre']?></td>
                         <td class="">
                             <a class="nav-button" href="modif_article.php?id=<?=$art['id_article']?>">Modifier</a>
-                            <a class="nav-button" href="traitement/supprimer_article.php?id=<?=$art['id_article']?>">Supprimer</a>
+                            <a class="nav-button supprimer" href="traitement/supprimer_article.php?id=<?=$art['id_article']?>">Supprimer</a>
                         </td>
                     </tr>
                     <?php } ?>

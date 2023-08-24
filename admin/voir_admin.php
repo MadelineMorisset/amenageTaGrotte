@@ -31,7 +31,7 @@ include('header_admin.php');
                         <td><?=$admin['prenom']?></td>
                         <td class="">
                             <a class="button150px35px" href="modif_admin.php?id=<?=$admin['id_admin']?>">Modifier</a>
-                            <a class="button150px35px" href="traitement/supprimer_admin.php?id=<?=$admin['id_admin']?>">Supprimer</a>
+                            <a class="button150px35px supprimer" href="traitement/supprimer_admin.php?id=<?=$admin['id_admin']?>">Supprimer</a>
                         </td>
                     </tr>
                     <?php } ?>

@@ -26,7 +26,7 @@ include('header_admin.php');
                         <td><?=$cat['categorie']?></td>
                         <td class="">
                             <a class="button150px35px" href="modif_categorie.php?id=<?=$cat['id_categorie']?>">Modifier</a>
-                            <a class="button150px35px" href="traitement/supprimer_categorie.php?id=<?=$cat['id_categorie']?>">Supprimer</a>
+                            <a class="button150px35px supprimer" href="traitement/supprimer_categorie.php?id=<?=$cat['id_categorie']?>">Supprimer</a>
                         </td>
                     </tr>
                     <?php } ?>
