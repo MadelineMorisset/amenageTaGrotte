@@ -6,6 +6,9 @@ include('header.php');
     <div class="title1">
         <h1><?=$art['categorie']?></h1>
     </div>
+    <div class="">
+        <a class="button-prev" href="categorie.php?id=<?=$art['id_categorie']?>">Retour</a>
+    </div>
     <?php
     $query = $db -> prepare('SELECT * FROM categorie INNER JOIN article_blog ON categorie.id_categorie = article_blog.id_categorie 
                             WHERE article_blog.id_article = :id');
@@ -15,9 +18,7 @@ include('header.php');
     $article = $query ->fetchAll();
         foreach($article as $art){
     ?>
-     <div class="">
-        <a class="button-prev" href="categorie.php?id=<?=$art['id_categorie']?>">Retour</a>
-    </div>
+     
     
     <section class=""> 
         <h2><?=$art['titre']?></h2>
