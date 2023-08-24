@@ -19,7 +19,7 @@ include('header_admin.php');
                 <input type="email" name="mail" class="">
                 <label for="mdp" class="">Mot de passe : </label>
                 <input type="text" name="mdp" class="">
-                <button class="nav-button" type="submit">Ajouter</button>
+                <button class="button150px35px" type="submit">Ajouter</button>
             </div>  
         </form>
 </main>

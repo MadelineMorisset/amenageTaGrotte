@@ -24,7 +24,7 @@ include('header_admin.php');
             <label for="media" class="">Média :</label>
             <input type="text" name="media" >
         </section>
-        <button type="submit">Ajouter</button>
+        <button class="button150px35px" type="submit">Ajouter</button>
     </form>
 </main>
 <?php include('footer_admin.php'); ?>
