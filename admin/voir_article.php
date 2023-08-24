@@ -26,8 +26,8 @@ include('header_admin.php');
                     <?php  foreach ( $article as $art ){{ ?>
                         <td><?=$art['titre']?></td>
                         <td class="">
-                            <a class="" href="modif_article.php?id=<?=$art['id_article']?>">Modifier</a>
-                            <a class="" href="traitement/supprimer_article.php?id=<?=$art['id_article']?>">Supprimer</a>
+                            <a class="button150px35px" href="modif_article.php?id=<?=$art['id_article']?>">Modifier</a>
+                            <a class="button150px35px" href="traitement/supprimer_article.php?id=<?=$art['id_article']?>">Supprimer</a>
                         </td>
                     </tr>
                     <?php } ?>
