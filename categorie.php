@@ -14,8 +14,10 @@ include('header.php');
     $categorie = $query -> fetchAll(); 
         foreach($categorie as $cat){?>
 
-    <div class="title1">
-        <h1><?=$cat['categorie']?></h1>
+    <div class="titles">
+        <div class="title1">
+            <h1><?=$cat['categorie']?></h1>
+        </div>
     </div>
 
     <?php } 

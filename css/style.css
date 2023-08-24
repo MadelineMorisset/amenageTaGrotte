@@ -1,6 +1,6 @@
 /* ------- BODY ------- */
 body {
-    padding: 20px;
+    margin: 0;
     font-family: 'Neuton', serif;
     font-family: 'Poltawski Nowy', serif;
     text-align: center;
@@ -16,11 +16,12 @@ header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+    padding: 20px;
 }
 
 .header-logoBlog {
     width: 150px;
-    height: 118px;
+    height: auto;
 }
 
 .nav {
@@ -55,7 +56,8 @@ header {
 main {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 300px 250px 300px;
+    margin-bottom: 50px;
+    padding: 0 300px 50px 300px;
 }
 
 .titles, .adminPage {
@@ -63,10 +65,9 @@ main {
     margin-bottom: 100px;
 }
 
-.title1 {
-    margin-bottom: 50px;
-    font-size: 2em;
-}
+.title1 {font-size: 1.5em;}
+
+.title2 {margin-top: 50px;}
 
 .titleDesc {
     margin-top: 50px;
@@ -114,10 +115,17 @@ main {
 
 .title-card {font-size: 1.4em;}
 
+.section-category {
+    width: 100%;
+    margin-bottom: 50px;
+    border: 2px solid #9eb384;
+}
+
 .section-category a{
     text-decoration: none;
     color: #000;
 }
+ 
 .section-comm {
     width: -webkit-fill-available;
     background-color: #DFD5C8;
@@ -157,13 +165,17 @@ main {
 }
 
 /* ------- FOOTER ------- */
-
+footer {
+    height: 120px;
+    bottom: 0;
+    padding: 0 300px 10px 300px;
+    background-color: #cedebd;
+}
 
 /* ---------- ADMIN - CONNECT------------ */
-
 .formConnection {
     width: 100%;
-    padding: 0 40%;
+    padding: 0 35%;
 }
 
 .identification {
