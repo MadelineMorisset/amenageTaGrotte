@@ -26,5 +26,5 @@ foreach ($administrateur as $utilisateur) {
         header('Location: admin.php');
     } else { die('erreur'); }
 }
-
+header('Location: admin.php')
 ?>

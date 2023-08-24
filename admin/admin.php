@@ -3,6 +3,7 @@ include ('session_start.php');
 include('header_admin.php'); 
 ?>
 <main>
+    <?php if($_SESSION){ ?>
     <section class="adminPage">
         <div class="title1">
             <h1><?php echo 'Bonjour '. $_SESSION['prenom']?></h1>
@@ -44,5 +45,6 @@ include('header_admin.php');
             </div>
         </div>
     </section>
+    <?php }?>
 </main>
 <?php include('footer_admin.php'); ?>

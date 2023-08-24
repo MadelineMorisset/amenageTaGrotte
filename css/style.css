@@ -134,6 +134,8 @@ main {
     -o-border-radius: 10px 20px;
     text-shadow: 2px 2px #B89567;
     background-color: #D6B096;
+    text-decoration: none;
+    color: #fff;
 }
 
 .button115px35px:active {
