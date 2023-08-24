@@ -4,7 +4,7 @@ include('header.php');
 ?>
 <main>
     <div class="">
-        <a class="button-prev" href="index.php">Retour</a>
+        <a class="button150px35px" href="index.php">Retour</a>
     </div>
     <?php 
     $query = $db -> prepare('SELECT * FROM categorie WHERE id_categorie = :id');
@@ -28,7 +28,7 @@ include('header.php');
         foreach($articles as $artBlog){       
     ?>
   
-    <section class="">
+    <section class="section-category">
         <a class="" href="article.php?id=<?=$artBlog['id_article']?>">
         <?php 
         $query3 = $db -> prepare('SELECT * FROM article_blog INNER JOIN media ON article_blog.id_article = media.id_article 
