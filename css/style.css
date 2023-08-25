@@ -70,7 +70,8 @@ main {
     margin-bottom: 100px;
 }
 
-.title1, .title2 {margin-top: 50px;}
+.title1, 
+.title2:not(.adminSection .title2) {margin-top: 50px;}
 
 .titleDesc {margin-top: 50px;}
 
@@ -245,7 +246,7 @@ footer {
 
 .adminSection {
     display: flex;
-    padding: 0 35%;
+    padding: 0 25%;
     justify-content: space-between;
 }
 
