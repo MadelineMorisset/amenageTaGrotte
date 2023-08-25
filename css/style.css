@@ -72,9 +72,7 @@ main {
 
 .title1, .title2 {margin-top: 50px;}
 
-.titleDesc {
-    margin-top: 50px;
-}
+.titleDesc {margin-top: 50px;}
 
 .cards {
     width: 100%;
@@ -92,9 +90,9 @@ main {
     box-shadow: 4px 4px 5px #9eb384;
 }
 
-.card:active {
-    box-shadow: none;
-}
+.card:hover {text-decoration: underline #000;}
+
+.card:active {box-shadow: none;}
 
 .image-card {
     width: 100%;
@@ -148,6 +146,7 @@ main {
     background-color: #DFD5C8;
     padding: 0 50px 20px 50px;
 }
+
 .sect-comm-top{margin-bottom: 80px;}
 
 .sect-comm-pre-p {
@@ -162,13 +161,14 @@ main {
     display: flex;
     flex-direction: column;
 }
+
 .form-comm {
     width: 100%;
     display: grid;
 }
-.form-comm .label {
-    width: 100%;
-}
+
+.form-comm .label {width: 100%;}
+
 .form-comm textarea {
     width: 100%;
     height: 100px;
@@ -176,18 +176,16 @@ main {
     padding: 5px 10px 10px 10px;
     border-radius: 5px;
 }
+
 .form-comm input {
     width: 50%;
     height: 20px;
     margin: 10px auto;
     border-radius: 5px;
 }
-.sect-comm-ecrire button {
-    margin-top: 20px;
-}
-.barre-separation {
-    border-top: 5px solid #B89567;
-}
+.sect-comm-ecrire button {margin-top: 20px;}
+
+.barre-separation {border-top: 5px solid #B89567;}
 
 /* ------- FOOTER ------- */
 footer {
@@ -204,9 +202,7 @@ footer {
     padding: 0 35%;
 }
 
-.identification {
-    padding: 0 15px 0 41px;
-}
+.identification {padding: 0 15px 0 41px;}
 
 .pseudoEmail {margin-bottom: 15px;}
 
@@ -281,28 +277,29 @@ footer {
     border-bottom: 2px solid #B89567;
     box-shadow: 0px 2px 4px #B89567 inset;
 }
-.table-admin {
-    width: 800px; 
-}
+
+.table-admin {width: 800px; }
+
 .table-admin th{
     padding: 25px;
     font-size: 1.25rem;
 }
-.table-admin td{
-    padding: 15px;
-}
+
+.table-admin td{padding: 15px;}
+
 .form-admin{
     width: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .form-admin label, .form-admin input{
     margin: 10px 0 15px 0;
 }
-.form-admin input{
-    width: 500px;
-}
+
+.form-admin input{width: 500px;}
+
 .sectionForm{
     display: flex;
     flex-direction: column;
